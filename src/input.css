@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 772px;
+  --breakpoint-lg: 992px;
+  --breakpoint--xl: 1170px;
+}
+
+@layer utilities{
+    .text-3xl{
+        font-size: 50px;
+    }
+
+    .text-2xl{
+        font-size: 10px;
+    }
+
+    .container{
+        margin: auto;
+        width:1165px;
+        padding:0px 20px;
+    }
+
+    .containerr{
+        width: 1170px;
+        margin: auto;
+    }
+
+    .cen{
+        margin-top: 30px;
+        margin: auto;
+    }
+
+    .conte{
+        width: 1440px;
+        margin: auto;
+        padding:0px 20px;
+    }
+
+}
+@layer components{
+    .btn{
+        @apply  w-[212px] bg-white  text-black py-4 px-5  h-[60px] rounded-2xl
+    }
+
+    .bottom{
+        @apply  py-2 px-5  hover:border-b-4 rounded-[10px] border-white  h-12
+    }
+
+    .card{
+        width: 350px;
+        height: 470px;
+        background-color: #1c1b1b;
+        border-radius: 10px;
+        padding: 20px;
+    }
+}
+
+
+.ico{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    animation: animate-pulse 3s linear infinite;
+    cursor: pointer;
+    opacity: 50px;
+}
+@keyframes animate-pulse{
+    0%{
+        box-shadow: rgba(red, green, blue, alpha), 0 0 0 0 rgb(235, 175, 24 , 20);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 0 rgb(255, 255, 255);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 40px rgba(4, 230, 91, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0.0),  0 0 0 30px rgba(255, 242, 0, 0);
+    }
+    
+}
+
+
